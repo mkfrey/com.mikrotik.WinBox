@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>com.mikrotik.WinBox</id>
+  <provides><id>com.mikrotik.WinBox.desktop</id></provides>
+  <launchable type="desktop-id">com.mikrotik.WinBox.desktop</launchable>
+  <name>WinBox</name>
+  <developer_name>SIA Mikrotīkls</developer_name>
+  <summary>Graphical utility for the administration of MikroTik RouterOS</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+  <url type="homepage">https://mikrotik.com/download</url>
+  <description>
+    <p>MikroTik WinBox is a powerful, graphical configuration tool for managing MikroTik RouterOS devices.</p>
+    <p>It provides a user-friendly interface that allows administrators to configure, monitor, and manage network settings,
+       including routing, firewalls, VPNs, and wireless configurations.</p>
+    <p>NOTE: This wrapper is not verified by, affiliated with, or supported by Mikrotik.</p>
+  </description>
+  <screenshots>
+    <screenshot>
+      <caption>Connection screen</caption>
+      <image type="source" width="1284" height="873">https://raw.githubusercontent.com/mkfrey/com.mikrotik.WinBox/1edec47606face50a635dc01ef1a8f2a614c4162/screenshots/winbox_initial_start.png</image>
+    </screenshot>
+    <screenshot type="default">
+      <caption>Configuration screen</caption>
+      <image type="source" width="1284" height="873">https://raw.githubusercontent.com/mkfrey/com.mikrotik.WinBox/1edec47606face50a635dc01ef1a8f2a614c4162/screenshots/winbox_connected.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Connection screen (dark mode)</caption>
+      <image type="source" width="1284" height="873">https://raw.githubusercontent.com/mkfrey/com.mikrotik.WinBox/464add9915c496ff48fb50979a3fe884f8c1f921/screenshots/winbox_initial_start_dark.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Configuration screen (dark mode)</caption>
+      <image type="source" width="1284" height="873">https://raw.githubusercontent.com/mkfrey/com.mikrotik.WinBox/464add9915c496ff48fb50979a3fe884f8c1f921/screenshots/winbox_connected_dark.png</image>
+    </screenshot>
+  </screenshots>
+  <content_rating type="oars-1.1">
+  </content_rating>
+  <releases>
+    <release version="4.0beta6" date="2024-09-14"/>
+  </releases>
+</component>

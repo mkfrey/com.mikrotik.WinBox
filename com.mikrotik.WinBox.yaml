@@ -1,0 +1,50 @@
+app-id: com.mikrotik.WinBox
+runtime: org.freedesktop.Platform
+runtime-version: '24.08'
+sdk: org.freedesktop.Sdk
+command: WinBox
+separate-locales: false
+tags:
+  - proprietary
+finish-args:
+  - --share=ipc
+  - --socket=x11
+  - --socket=pulseaudio
+  - --share=network
+  - --device=dri
+#  - --env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons
+modules:
+  - name: winbox
+    buildsystem: simple
+    build-commands:
+      - install -Dm644 com.mikrotik.WinBox.appdata.xml /app/share/appdata/com.mikrotik.WinBox.appdata.xml
+      - install -Dm644 winbox_256.png /app/share/icons/hicolor/256x256/apps/com.mikrotik.WinBox.png
+      - install -Dm644 com.mikrotik.WinBox.desktop /app/share/applications/com.mikrotik.WinBox.desktop
+      - install -D apply_extra -t /app/bin
+      - install -D WinBox -t /app/bin
+    sources:
+      - type: script
+        dest-filename: apply_extra
+        commands:
+          - unzip winbox.zip
+          #- rm -r assets
+      - type: file
+        path: WinBox
+      - type: file
+        path: com.mikrotik.WinBox.desktop
+      - type: file
+        path: com.mikrotik.WinBox.appdata.xml
+      - type: file
+        path: icons/winbox_256.png
+      - type: extra-data
+        filename: winbox.zip
+        only-arches:
+          - x86_64
+        url: https://download.mikrotik.com/routeros/winbox/4.0beta6/WinBox_Linux.zip
+        sha256: 3c26f58d00f349b95875ff9abcafc8610798803d7d271f3f2b0760f7f120c4db
+        size: 22220141
+        x-checker-data:
+          type: html
+          url: https://mikrotik.com/download
+          url-pattern: "(https://download.mikrotik.com/routeros/winbox/([^/]+)/WinBox_Linux.zip)"
+

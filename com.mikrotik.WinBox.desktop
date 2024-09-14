@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=WinBox
+GenericName=Mikrotik RouterOS management
+Comment=Graphical configuration tool for Mikrotik RouterOS
+Icon=com.mikrotik.WinBox
+Exec=WinBox
+Terminal=false
+Categories=Network;RemoteAccess;
+Keywords=Router;
+StartupWMClass=WinBox
